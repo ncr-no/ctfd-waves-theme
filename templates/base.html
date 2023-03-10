@@ -1,68 +1,86 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>{{ Configs.ctf_name }}</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{ Configs.ctf_small_icon }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ url_for('views.themes', theme='core', path='css/fonts.css') }}">
-    <link rel="stylesheet" href="{{ url_for('views.themes', theme='core', path='css/core.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('views.themes', path='css/style.dev.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HackerThemes/theme-machine@latest/dist/neon-glow/css/bootstrap4-neon-glow.min.css">
+<head>
+  <title>{{ Configs.ctf_name }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{{ Configs.ctf_small_icon }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('views.themes', theme='core', path='css/fonts.css') }}">
+  <link rel="stylesheet" href="{{ url_for('views.themes', theme='core', path='css/core.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('views.themes', path='css/style.dev.css') }}">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/HackerThemes/theme-machine@latest/dist/neon-glow/css/bootstrap4-neon-glow.min.css">
 
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css'>
-    {% block stylesheets %}{% endblock %}
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css'>
+  {% block stylesheets %}{% endblock %}
 
-    {{ Plugins.styles }}
-    <script type="text/javascript">
-      var init = {
-        'urlRoot': "{{ request.script_root }}",
-        'csrfNonce': "{{ Session.nonce }}",
-        'userMode': "{{ Configs.user_mode }}",
-        'userId': "{{ Session.id }}",
-        'start': "{{ Configs.start | tojson }}",
-        'end': "{{ Configs.end | tojson }}",
-        'theme_settings': "{{ Configs.theme_settings | tojson }}"
-      }
-    </script>
-    {{ Configs.theme_header }}
-  </head>
+  {{ Plugins.styles }}
+  <script type="text/javascript">
+    var init = {
+      'urlRoot': "{{ request.script_root }}",
+      'csrfNonce': "{{ Session.nonce }}",
+      'userMode': "{{ Configs.user_mode }}",
+      'userId': "{{ Session.id }}",
+      'start': "{{ Configs.start | tojson }}",
+      'end': "{{ Configs.end | tojson }}",
+      'theme_settings': "{{ Configs.theme_settings | tojson }}"
+    }
+  </script>
+  {{ Configs.theme_header }}
+</head>
 
-  <body>
+<body>
     {% include "components/navbar.html" %}
 
     <main role="main">
       {% block content %}{% endblock %}
     </main>
 
-  
-    <footer class="footer">
 
-                <div class="container text-center">
-                  
-                  <a href="https://ctfd.io" class="text-secondary">
-                    <small class="text-muted">Powered by CTFd</small>
-                  </a>
-                </div>
-              </div>
+  <footer class="footer">
 
-    </footer>
+    <!--Waves Container-->
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+      </svg>
+    </div>
+    <!--Waves end-->
 
-    <script defer="defer" src="{{ url_for('views.themes', theme='core', path='js/vendor.bundle.js') }}"></script>
-    <script defer="defer" src="{{ url_for('views.themes', theme='core', path='js/core.js') }}"></script>
-    <script defer="defer" src="{{ url_for('views.themes', theme='core', path='js/helpers.js') }}"></script>
+    <div class="container text-center">
 
-    {% block entrypoint %}
-      <script defer="defer" src="{{ url_for('views.themes', theme='core', path='js/pages/main.js') }}"></script>
-    {% endblock %}
+      <a href="https://ctfd.io" class="text-secondary">
+        <small class="text-muted">Copyright © 2023 Norwegian Cyber Range, NTNU. Powered by CTFd</small>
+      </a>
+    </div>
+    </div>
 
-    {% block scripts %}{% endblock %}
+  </footer>
 
-    {{ Plugins.scripts }}
+  <script defer="defer" src="{{ url_for('views.themes', theme='core', path='js/vendor.bundle.js') }}"></script>
+  <script defer="defer" src="{{ url_for('views.themes', theme='core', path='js/core.js') }}"></script>
+  <script defer="defer" src="{{ url_for('views.themes', theme='core', path='js/helpers.js') }}"></script>
 
-    {{ Configs.theme_footer }}
+  {% block entrypoint %}
+  <script defer="defer" src="{{ url_for('views.themes', theme='core', path='js/pages/main.js') }}"></script>
+  {% endblock %}
 
-  </body>
+  {% block scripts %}{% endblock %}
+
+  {{ Plugins.scripts }}
+
+  {{ Configs.theme_footer }}
+
+</body>
 
 </html>

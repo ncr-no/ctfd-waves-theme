@@ -35,37 +35,21 @@ p {
   color: #333333;
 }
 
-
-
-.inner-header {
-  height:65vh;
-  width:100%;
-  margin: 0;
-  padding: 0;
-  background-color: #138fe0;
+.header {
+  position:relative;
+  text-align:center;
+  background: #2196f3;
+  color:white;
+  
 }
 
-.flex { /*Flexbox for containers*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
 .waves {
-  position:relative;
   width: 100%;
-  height: 3px;
-  margin-bottom:-20px; /*Fix for safari gap*/
-  min-height:100px;
+  height: 10px;
+  min-height:150px;
   max-height:150px;
-}
-
-.content {
-  position:relative;
-  height:20vh;
-  text-align:center;
-  background-color: white;
+  margin-top: -210px;
 }
 
 /* Animation */
@@ -97,20 +81,6 @@ p {
     transform: translate3d(85px,0,0);
   }
 }
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height:40px;
-    min-height:40px;
-  }
-  .content {
-    height:30vh;
-  }
-  h1 {
-    font-size:24px;
-  }
-}
-
 /* Using bootstrap button mixin for some custom buttons */
 .btn-ht-blue {
   color: #fff;
@@ -1030,6 +1000,17 @@ body.ht-tm-neon-glow .ht-navbar-wrapper {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
+/*Shrinking for mobile*/
+@media (max-width: 1000px) {
+  .waves {
+    height:40px;
+    min-height:35px;
+    margin-top: -102px;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
 
 @media (max-width: 767.98px) {
   .ht-tm-navbar {
