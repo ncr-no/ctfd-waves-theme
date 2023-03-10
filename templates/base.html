@@ -20,10 +20,10 @@
         'urlRoot': "{{ request.script_root }}",
         'csrfNonce': "{{ Session.nonce }}",
         'userMode': "{{ Configs.user_mode }}",
-        'userId': {{ Session.id }},
-        'start': {{ Configs.start | tojson }},
-        'end': {{ Configs.end | tojson }},
-        'theme_settings': {{ Configs.theme_settings | tojson }}
+        'userId': "{{ Session.id }}",
+        'start': "{{ Configs.start | tojson }}",
+        'end': "{{ Configs.end | tojson }}",
+        'theme_settings': "{{ Configs.theme_settings | tojson }}"
       }
     </script>
     {{ Configs.theme_header }}
@@ -36,12 +36,17 @@
       {% block content %}{% endblock %}
     </main>
 
+  
     <footer class="footer">
-      <div class="container text-center">
-        <a href="https://ctfd.io" class="text-secondary">
-          <small class="text-muted">Powered by CTFd</small>
-        </a>
-      </div>
+
+                <div class="container text-center">
+                  
+                  <a href="https://ctfd.io" class="text-secondary">
+                    <small class="text-muted">Powered by CTFd</small>
+                  </a>
+                </div>
+              </div>
+
     </footer>
 
     <script defer="defer" src="{{ url_for('views.themes', theme='core', path='js/vendor.bundle.js') }}"></script>
@@ -57,6 +62,7 @@
     {{ Plugins.scripts }}
 
     {{ Configs.theme_footer }}
+
   </body>
 
 </html>
