@@ -17,9 +17,7 @@
           <div class="tab-pane fade show active" id="profile" role="tabpanel">
             {% include "components/errors.html" %}
 
-            {% with form = Forms
-              .self
-              .SettingsForm(country = country) %}
+            {% with form = Forms.self.SettingsForm(country = country) %}
             {% from "core/macros/forms.html" import render_extra_fields %}
             <form id="user-profile-form" method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal">
               <div class="form-group">
@@ -66,9 +64,7 @@
             {% endwith %}
           </div>
           <div class="tab-pane fade" id="tokens" role="tabpanel">
-            {% with form = Forms
-              .self
-              .TokensForm() %}
+            {% with form = Forms.self.TokensForm() %}
             <form method="POST" id="user-token-form">
               <div class="form-group">
                 <b>{{ form.expiration.label }}</b>
