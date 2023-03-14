@@ -1500,6 +1500,12 @@ body.ht-tm-neon-glow .ht-navbar-wrapper {
   }
 }
 
+a:hover {
+  color:#FCBD00 !important;
+  border-color: #fff !important;
+}
+
+/* CUSTOM OPENECSC */
 .ht-tm-navbar-bubblegum nav a {
   color: #fff;
 }
@@ -1519,7 +1525,6 @@ a:has(.ht-logo-img) {
 }
 
 
-/* CUSTOM OPENECSC */
 
 .form-control {
   background-color: #ffffff !important;
