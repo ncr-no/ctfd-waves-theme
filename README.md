@@ -1,4 +1,4 @@
-# ctfd-neon-theme
+# CTFd WAVES THEME
 Compatible with CTFd Version >=3.5.1
 
 Sample Screenshots:
