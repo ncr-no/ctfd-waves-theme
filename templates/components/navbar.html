@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark ht-tm-navbar">
   <a href="{{ url_for('views.static_html', route='/') }}" class="text-decoration-none text-dark ht-logo-img">
     {% if Configs.ctf_logo %}
-      <img class="img-responsive ctf_logo" src="{{ url_for('views.files', path=Configs.ctf_logo) }}" height="30"
+      <img class="img-responsive ctf_logo" src="{{ url_for('views.files', path=Configs.ctf_logo) }}" height="35"
         alt="{{ Configs.ctf_name }}">
         <span class="ht-tm-navbar-title">{{ Configs.ctf_name }}</span>
     {% else %}
