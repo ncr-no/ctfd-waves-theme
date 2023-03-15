@@ -14,7 +14,7 @@ git clone https://github.com/ncr-no/openecsc-ctfd-theme.git <CTFd-path>/CTFd/the
 
 ## Usage
 1. Access the CTFd Admin Panel
-2. Go to Config > Themes and select **waves** theme.
+2. Go to Config > Themes and select `waves` theme.
 3. Go to Pages > All Pages > index and use [index.html](https://github.com/ncr-no/openecsc-ctfd-theme/blob/master/templates/index.html) as index page content
 
 ## Credits
