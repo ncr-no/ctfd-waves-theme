@@ -15,7 +15,7 @@ git clone https://github.com/chainflag/ctfd-neon-theme.git CTFd-path/CTFd/themes
 ## Usage
 1. Access the CTFd Admin Panel
 2. Go to Config > Themes and select neon theme.
-3. Go to Pages > All Pages > index and use [index.html](https://github.com/chainflag/ctfd-neon-theme/blob/main/templates/index.html) as index page content
+3. Go to Pages > All Pages > index and use [index.html](https://github.com/ncr-no/openecsc-ctfd-theme/blob/master/templates/index.html) as index page content
 
 ## Credits
 * [CTFd](https://github.com/CTFd/CTFd)
