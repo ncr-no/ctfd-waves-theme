@@ -1701,3 +1701,16 @@ input#_submit:hover {
 .custom-control div .text-muted a{
   color: #FCBD00 !important;
 }
+.footer_logo {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  max-width: 500px !important;
+}
+.footer_logo_container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: -2em;
+}
