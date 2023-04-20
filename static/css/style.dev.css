@@ -1735,6 +1735,38 @@ input#_submit:hover {
   background-color: #fff !important;
   border-color: #fff !important;
 }
+code {
+  color: #FCBD00 !important;
+}
+span a {
+  color: #FCBD00 !important;
+}
+
+.badge.badge-info.challenge-tag {
+  background-color: #FCBD00 !important;
+  color: #101010 !important;
+}
+
+.btn.btn-info.btn-hint{
+  background-color: #FCBD00 !important;
+  color: #101010 !important;
+}
+.btn.btn-info.btn-hint:hover{
+  background-color: #fff !important;
+  color: #101010 !important;
+  border-color: #FCBD00 !important;
+}
+
+.btn.btn-info.btn-file{
+  background-color: #FCBD00 !important;
+  color: #101010 !important;
+}
+.btn.btn-info.btn-file:hover{
+  background-color: #fff !important;
+  color: #101010 !important;
+  border-color: #FCBD00 !important;
+}
+
 
 
 @media (max-width: 490px) {  
