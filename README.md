@@ -9,7 +9,7 @@ Sample Screenshots:
 
 ## Install
 ```
-git clone https://github.com/ncr-no/openecsc-ctfd-theme.git <CTFd-path>/CTFd/themes/waves
+git clone https://github.com/ncr-no/ctfd-waves-theme.git <CTFd-path>/CTFd/themes/waves
 ```
 
 ## Usage
